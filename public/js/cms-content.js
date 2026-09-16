@@ -1,0 +1,1 @@
+(function(){'use strict';try{Object.keys(localStorage).filter(function(k){return k.indexOf('cms:')===0;}).forEach(function(k){localStorage.removeItem(k);});}catch(e){} window.SiteCMS={items:[],loaded:true};})();
