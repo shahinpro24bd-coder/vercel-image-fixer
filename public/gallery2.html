@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Gallery | Dr. Md. Habibur Rahman | Urology &amp; Andrology Specialist | Dhaka</title>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="ইউরোলজি ও অ্যান্ড্রোলজি ঢাকা, কিডনির পাথর, প্রোস্টেট, প্রস্রাবের সমস্যা, Urologist Dhaka, Dr Md Habibur Rahman" name="keywords"/>
+<meta content="Gallery of Dr. Md. Habibur Rahman — urology care, procedures and patient consultation at Shamorita Hospital Ltd. & Trust Care Diagnostic Center, Dhaka." name="description"/>
+<link href="/favicon.png" rel="icon" type="image/png"/>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&amp;family=Noto+Sans+Bengali:wght@400;500;600;700&amp;family=Playfair+Display:wght@500;600&amp;family=Work+Sans&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Font Awesome -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<!-- Bootstrap Icons -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet"/>
+<!-- Libraries -->
+<link href="lib/animate/animate.min.css" rel="stylesheet"/>
+<link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet"/>
+<!-- Bootstrap -->
+<link href="css/bootstrap.min.css" rel="stylesheet"/>
+<!-- Main CSS -->
+<link href="css/style.css" rel="stylesheet"/>
+<style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            overflow-x: hidden;
+        }
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: var(--theme-primary);
+            border-radius: 4px;
+        }
+        @keyframes pulseGlow {
+            0%,
+            100% {
+                opacity: 0.15;
+                transform: scale(1);
+            }
+            50% {
+                opacity: 0.35;
+                transform: scale(1.1);
+            }
+        }
+        .glow-orb {
+            position: fixed;
+            width: 500px;
+            height: 500px;
+            background: var(--theme-primary);
+            border-radius: 50%;
+            filter: blur(140px);
+            animation: pulseGlow 8s ease-in-out infinite;
+            pointer-events: none;
+            z-index: -10;
+        }
+        .orb-1 {
+            top: 0;
+            left: 25%;
+        }
+        .orb-2 {
+            bottom: 2.5rem;
+            right: 25%;
+            animation-delay: 4s;
+            width: 400px;
+            height: 400px;
+            filter: blur(160px);
+        }
+        main {
+            width: 100%;
+            max-width: 90rem;
+            margin: 0 auto;
+            padding: 0 1.5rem 4rem;
+        }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(1, minmax(0, 1fr));
+            gap: 2rem;
+        }
+        @media (min-width: 640px) {
+            .gallery-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 2rem;
+            }
+        }
+        @media (min-width: 992px) {
+            .gallery-grid {
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+                gap: 2.5rem;
+            }
+        }
+        @media (min-width: 1400px) {
+            main {
+                max-width: 95rem;
+            }
+            .gallery-grid {
+                gap: 3rem;
+            }
+        }
+        .glass-panel {
+            background: rgba(17, 24, 39, 0.7);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .gallery-card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 1.5rem;
+            cursor: pointer;
+            width: 100%;
+            aspect-ratio: 4 / 3;
+            transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+        .gallery-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 25px 50px -12px rgba(8, 63, 67, 0.45);
+        }
+        .gallery-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.7s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+        .gallery-card:hover img {
+            transform: scale(1.1);
+        }
+        .card-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(8, 63, 67, 0.25);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .gallery-card:hover .card-overlay {
+            opacity: 1;
+        }
+        .overlay-icon {
+            width: 4rem;
+            height: 4rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.35rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+            transform: scale(0.75);
+            transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+        .gallery-card:hover .overlay-icon {
+            transform: scale(1);
+        }
+        #lightbox-modal {
+            position: fixed;
+            inset: 0;
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0, 0, 0, 0.92);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+            padding: 1rem;
+        }
+        #lightbox-modal.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+        .close-btn {
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+            width: 3.5rem;
+            height: 3.5rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.35rem;
+            border: none;
+            cursor: pointer;
+            z-index: 10000;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .close-btn:hover {
+            background-color: var(--theme-primary);
+            transform: rotate(90deg);
+        }
+        .lightbox-content-box {
+            position: relative;
+            max-width: 90rem;
+            width: 100%;
+            max-height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .lightbox-inner {
+            overflow: hidden;
+            border-radius: 1.5rem;
+            padding: 0.5rem;
+            box-shadow: 0 25px 50px -12px rgba(8, 63, 67, 0.3);
+            max-width: 100%;
+            max-height: 90vh;
+        }
+        #lightbox-img {
+            max-width: 100%;
+            max-height: 85vh;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            border-radius: 1rem;
+            display: block;
+            margin: 0 auto;
+        }
+        @media (max-width: 576px) {
+            main {
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+            .gallery-grid {
+                gap: 1.25rem;
+            }
+            .gallery-card {
+                border-radius: 1rem;
+                aspect-ratio: 4 / 3;
+            }
+            .close-btn {
+                top: 1rem;
+                right: 1rem;
+                width: 3rem;
+                height: 3rem;
+            }
+        }
+
+        /* -------- WARNING MODAL (White, Red, var(--theme-primary)) -------- */
+        .warning-overlay {
+            position: fixed;
+            inset: 0;
+            z-index: 99999;
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(8px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1.5rem;
+            transition: opacity 0.4s ease;
+        }
+        .warning-overlay.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+        .warning-box {
+            background: white;
+            max-width: 520px;
+            width: 100%;
+            padding: 2.5rem 2rem;
+            border-radius: 2rem;
+            text-align: center;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
+            border: 1px solid rgba(8, 63, 67, 0.2);
+        }
+        .warning-box .icon-wrap {
+            font-size: 3.5rem;
+            color: #dc3545;
+            margin-bottom: 1rem;
+        }
+        .warning-box h2 {
+            font-weight: 700;
+            color: #dc3545;
+            font-size: 1.8rem;
+            margin-bottom: 0.75rem;
+            letter-spacing: -0.5px;
+        }
+        .warning-box p {
+            color: #1e1e1e;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+        }
+        .warning-box .btn-group {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .warning-box .btn-danger-custom {
+            background: #dc3545;
+            color: white;
+            border: none;
+            padding: 0.75rem 2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: 0.25s;
+            box-shadow: 0 8px 20px rgba(220, 53, 69, 0.3);
+            cursor: pointer;
+            min-width: 130px;
+        }
+        .warning-box .btn-danger-custom:hover {
+            background: #b02a37;
+            transform: translateY(-2px);
+            box-shadow: 0 12px 28px rgba(220, 53, 69, 0.4);
+        }
+        .warning-box .btn-primary-custom {
+            background: var(--theme-primary);
+            color: white;
+            border: none;
+            padding: 0.75rem 2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: 0.25s;
+            box-shadow: 0 8px 20px rgba(8, 63, 67, 0.3);
+            cursor: pointer;
+            min-width: 130px;
+        }
+        .warning-box .btn-primary-custom:hover {
+            background: #0350c7;
+            transform: translateY(-2px);
+            box-shadow: 0 12px 28px rgba(8, 63, 67, 0.4);
+        }
+        .warning-box .btn-secondary-custom {
+            background: #e9ecef;
+            color: #1e1e1e;
+            border: none;
+            padding: 0.75rem 2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: 0.25s;
+            cursor: pointer;
+            min-width: 130px;
+        }
+        .warning-box .btn-secondary-custom:hover {
+            background: #d4d9df;
+        }
+        @media (max-width: 480px) {
+            .warning-box {
+                padding: 2rem 1.25rem;
+            }
+            .warning-box h2 {
+                font-size: 1.5rem;
+            }
+            .warning-box .btn-group {
+                flex-direction: column;
+                align-items: center;
+            }
+            .warning-box .btn-danger-custom,
+            .warning-box .btn-primary-custom,
+            .warning-box .btn-secondary-custom {
+                width: 100%;
+                max-width: 220px;
+            }
+        }
+    </style>
+
+<meta property="og:title" content="Gallery | Dr. Md. Habibur Rahman | Urology &amp; Andrology Specialist | Dhaka"/>
+<meta property="og:description" content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="ইউরোলজি ও অ্যান্ড্রোলজি ঢাকা, কিডনির পাথর, প্রোস্টেট, প্রস্রাবের সমস্যা, Urologist Dhaka, Dr Md Habibur Rahman" name="keywords"/>
+<meta content="Gallery of Dr. Md. Habibur Rahman — urology care, procedures and patient consultation at Shamorita Hospital Ltd. & Trust Care Diagnostic Center, Dhaka."/>
+<meta property="og:type" content="website"/>
+<meta name="twitter:card" content="summary_large_image"/>
+</head>
+<body>
+<!-- ===== SPINNER ===== -->
+<div class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center" id="spinner">
+<div class="spinner-grow text-primary" role="status" style="width: 3rem; height: 3rem;">
+<span class="sr-only">Loading...</span>
+</div>
+</div>
+<!-- nav -->
+<div class="container-fluid bg-light sticky-top p-0">
+<nav class="navbar navbar-expand-lg navbar-light p-0">
+<a class="navbar-brand py-2 px-3 me-0 d-flex align-items-center gap-2" href="index.html" style="background: var(--bs-primary);">
+<img alt="Dr. Md. Habibur Rahman — Urology &amp; Andrology Specialist" class="brand-logo" src="img/dr-habibur-logo.png"/>
+</a>
+<button class="navbar-toggler me-4" data-bs-target="#navbarCollapse" data-bs-toggle="collapse" type="button">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse p-3" id="navbarCollapse">
+<div class="navbar-nav mx-auto">
+<a class="nav-item nav-link active" href="index.html">Home</a>
+<a class="nav-item nav-link" href="about.html">About</a>
+<a class="nav-item nav-link" href="service.html">Services</a>
+<a class="nav-item nav-link" href="gallery.html">Gallery</a>
+<a class="nav-item nav-link" href="contact.html">Contact</a>
+<a aria-label="Facebook" class="nav-item nav-link" href="https://www.facebook.com/drhabiburologist" rel="noopener" target="_blank"><i class="fab fa-facebook-f me-1"></i>Facebook</a>
+</div>
+<a class="btn btn-sm btn-primary" href="contact.html">Book Appointment</a>
+<div aria-label="Language selector" class="language-switcher" role="group">
+<button class="active" data-language="en" onclick="switchSiteLanguage('en')" type="button">EN</button>
+<button data-language="bn" onclick="switchSiteLanguage('bn')" type="button">বাংলা</button>
+</div>
+</div>
+</nav>
+</div>
+<!-- nav -->
+<!-- ===== PAGE HEADER ===== -->
+<div class="container-fluid page-header py-5 mb-5">
+<div class="container text-center py-5">
+<h1 class="display-1 animated slideInLeft">Our Gallery</h1>
+<nav aria-label="breadcrumb">
+<ol class="breadcrumb justify-content-center animated slideInLeft mb-0">
+<li class="breadcrumb-item"><a class="text-primary" href="index.html">Home</a></li>
+<li aria-current="page" class="breadcrumb-item active">Gallery</li>
+</ol>
+</nav>
+</div>
+</div>
+<!-- ===== BACKGROUND GLOW ===== -->
+<div class="glow-orb orb-1"></div>
+<div class="glow-orb orb-2"></div>
+<!-- ===== GALLERY MAIN ===== -->
+<main>
+<div class="gallery-grid">
+<div class="gallery-item"><div class="gallery-card glass-panel" onclick="openLightbox(this)"><img alt="Dr. Md. Habibur Rahman, Urology &amp; Andrology Specialist (1)" loading="lazy" src="img/dr-habibur-operating.jpg"/><div class="card-overlay"><div class="overlay-icon glass-panel"><i class="fa-solid fa-expand"></i></div></div></div></div>
+<div class="gallery-item"><div class="gallery-card glass-panel" onclick="openLightbox(this)"><img alt="Dr. Md. Habibur Rahman at the urology clinic (2)" loading="lazy" src="img/dr-habibur-enhanced.jpg"/><div class="card-overlay"><div class="overlay-icon glass-panel"><i class="fa-solid fa-expand"></i></div></div></div></div>
+<div class="gallery-item"><div class="gallery-card glass-panel" onclick="openLightbox(this)"><img alt="Dr. Md. Habibur Rahman in the urology unit (3)" loading="lazy" src="img/dr-habibur-operating.jpg"/><div class="card-overlay"><div class="overlay-icon glass-panel"><i class="fa-solid fa-expand"></i></div></div></div></div>
+<div class="gallery-item"><div class="gallery-card glass-panel" onclick="openLightbox(this)"><img alt="Urology treatment and patient counselling" loading="lazy" src="img/dr-habibur-enhanced.jpg"/><div class="card-overlay"><div class="overlay-icon glass-panel"><i class="fa-solid fa-expand"></i></div></div></div></div>
+<div class="gallery-item"><div class="gallery-card glass-panel" onclick="openLightbox(this)"><img alt="Dr. Md. Habibur Rahman in clinical dress (5)" loading="lazy" src="img/dr-habibur-operating.jpg"/><div class="card-overlay"><div class="overlay-icon glass-panel"><i class="fa-solid fa-expand"></i></div></div></div></div>
+<div class="gallery-item"><div class="gallery-card glass-panel" onclick="openLightbox(this)"><img alt="Dr. Md. Habibur Rahman on clinical duty (6)" loading="lazy" src="img/dr-habibur-enhanced.jpg"/><div class="card-overlay"><div class="overlay-icon glass-panel"><i class="fa-solid fa-expand"></i></div></div></div></div>
+<div class="gallery-item"><div class="gallery-card glass-panel" onclick="openLightbox(this)"><img alt="Urology examination rooms (7)" loading="lazy" src="img/dr-habibur-enhanced.jpg"/><div class="card-overlay"><div class="overlay-icon glass-panel"><i class="fa-solid fa-expand"></i></div></div></div></div>
+<div class="gallery-item"><div class="gallery-card glass-panel" onclick="openLightbox(this)"><img alt="Patient reception and waiting area (8)" loading="lazy" src="img/dr-habibur-operating.jpg"/><div class="card-overlay"><div class="overlay-icon glass-panel"><i class="fa-solid fa-expand"></i></div></div></div></div>
+<div class="gallery-item"><div class="gallery-card glass-panel" onclick="openLightbox(this)"><img alt="Ultrasound examination room (9)" loading="lazy" src="img/dr-habibur-enhanced.jpg"/><div class="card-overlay"><div class="overlay-icon glass-panel"><i class="fa-solid fa-expand"></i></div></div></div></div>
+<div class="gallery-item"><div class="gallery-card glass-panel" onclick="openLightbox(this)"><img alt="Operating theatre for urological procedures (10)" loading="lazy" src="img/urology-kidney-care.jpg"/><div class="card-overlay"><div class="overlay-icon glass-panel"><i class="fa-solid fa-expand"></i></div></div></div></div>
+<div class="gallery-item"><div class="gallery-card glass-panel" onclick="openLightbox(this)"><img alt="Recovery ward (11)" loading="lazy" src="img/urology-surgery.jpg"/><div class="card-overlay"><div class="overlay-icon glass-panel"><i class="fa-solid fa-expand"></i></div></div></div></div>
+<div class="gallery-item"><div class="gallery-card glass-panel" onclick="openLightbox(this)"><img alt="Sterilised urology instruments (12)" loading="lazy" src="img/urology-kidney-stone.jpg"/><div class="card-overlay"><div class="overlay-icon glass-panel"><i class="fa-solid fa-expand"></i></div></div></div></div>
+<div class="gallery-item"><div class="gallery-card glass-panel" onclick="openLightbox(this)"><img alt="Consultation desk with kidney model (13)" loading="lazy" src="img/urology-andrology.jpg"/><div class="card-overlay"><div class="overlay-icon glass-panel"><i class="fa-solid fa-expand"></i></div></div></div></div>
+<div class="gallery-item"><div class="gallery-card glass-panel" onclick="openLightbox(this)"><img alt="Radiology reporting station (14)" loading="lazy" src="img/urology-pediatric.jpg"/><div class="card-overlay"><div class="overlay-icon glass-panel"><i class="fa-solid fa-expand"></i></div></div></div></div>
+<div class="gallery-item"><div class="gallery-card glass-panel" onclick="openLightbox(this)"><img alt="Clinic corridor (15)" loading="lazy" src="img/urology-prostate-bladder.jpg"/><div class="card-overlay"><div class="overlay-icon glass-panel"><i class="fa-solid fa-expand"></i></div></div></div></div>
+</div>
+</main>
+<!-- ===== LIGHTBOX ===== -->
+<div id="lightbox-modal">
+<button class="close-btn glass-panel" onclick="closeLightbox()"><i class="fa-solid fa-xmark"></i></button>
+<div class="lightbox-content-box">
+<div class="lightbox-inner glass-panel">
+<img alt="Expanded view" id="lightbox-img" src=""/>
+</div>
+</div>
+</div>
+<!-- disclaimer -->
+<div class="container-fluid bg-light py-4">
+<div class="container">
+<p class="text-center mb-0 small"><i class="fas fa-info-circle text-primary me-2"></i>এই ওয়েবসাইটের তথ্য সাধারণ রোগী-শিক্ষার জন্য। ব্যক্তিগত রোগ নির্ণয়, অপারেশনের প্রয়োজনীয়তা বা ফলাফল সম্পর্কে সিদ্ধান্ত চিকিৎসকের সরাসরি মূল্যায়নের ভিত্তিতে হবে।</p>
+</div>
+</div>
+<!-- disclaimer -->
+<!-- Footer -->
+<div class="container-fluid footer position-relative bg-dark text-white-50 py-5 mt-5 wow fadeIn" data-wow-delay="0.2s">
+<div class="container py-5">
+<div class="row g-5">
+<!-- Doctor Information -->
+<div class="col-lg-6 pe-lg-5">
+<a class="navbar-brand d-inline-flex align-items-center" href="#">
+<img alt="Dr. Md. Habibur Rahman — Urology &amp; Andrology Specialist" class="brand-logo" src="img/dr-habibur-logo.png"/>
+
+</a>
+<p>
+                    Dr. Md. Habibur Rahman<br/>
+                    MBBS, BCS, FCPS (Urology), FACS (USA)<br/>
+                    Senior Consultant &amp; Leading Urology and Andrology Specialist<br/>
+                    Urology Department — Shamorita Hospital Ltd. & Trust Care Diagnostic Center<br/>
+                    পান্থপথ ও মোহাম্মদপুর, ঢাকা
+                </p>
+<p class="mb-2">
+<i class="fa fa-map-marker-alt me-2"></i>
+                    Panthapath & Mohammadpur, Dhaka
+                </p>
+<p class="mb-2">
+<i class="fa fa-phone me-2"></i>
+                    Appointment &amp; Serial: 01717-497858
+                </p>
+
+
+<p class="mb-2">
+<i class="fa fa-stethoscope me-2"></i>
+                    Kidney Disease  |  Male Infertility  |  Pediatric Urology  |  Prostate &amp; Bladder
+                </p>
+<p class="mb-2">
+<i class="fa fa-user-md me-2"></i>
+                    Modern urology and surgical treatment with follow-up
+                </p>
+<p class="mb-2">
+<i class="fa fa-info-circle me-2"></i>
+                    Please take a serial by phone before your visit and bring all previous reports.
+                </p>
+<p class="mb-0 fst-italic">
+                    “Right advice is the first step to a healthy life.”
+                </p>
+<div class="d-flex justify-content-start mt-4">
+<a aria-label="Dr. Habibur Rahman on Facebook" class="btn btn-primary btn-sm-square me-2" href="https://www.facebook.com/drhabiburologist" rel="noopener" target="_blank"><i class="fab fa-facebook-f"></i></a>
+</div>
+</div>
+<!-- Footer Links -->
+<div class="col-lg-6 ps-lg-5">
+<div class="row g-4">
+<!-- Urology Services -->
+<div class="col-sm-6">
+<h5 class="text-primary mb-4">
+                            Urology Services
+                        </h5>
+<a class="btn btn-link" href="service.html">
+                            Stone Removal — Modern Procedures
+                        </a>
+<a class="btn btn-link" href="service.html">
+                            Prostate Disease — Diagnosis &amp; Treatment
+                        </a>
+<a class="btn btn-link" href="service.html">
+                            Male Infertility & Azoospermia
+                        </a>
+<a class="btn btn-link" href="service.html">
+                            Prostate &amp; Bladder Problems
+                        </a>
+<a class="btn btn-link" href="service.html">
+                            Kidney Stone
+                        </a>
+<a class="btn btn-link" href="service.html">
+                            Pediatric Urology
+                        </a>
+<a class="btn btn-link" href="service.html">
+                            Post-operative Follow-up
+                        </a>
+</div>
+<!-- Quick Links -->
+<div class="col-sm-6">
+<h5 class="text-primary mb-4">
+                            Quick Links
+                        </h5>
+<a class="btn btn-link" href="about.html">
+                            About Us
+                        </a>
+<a class="btn btn-link" href="contact.html">
+                            Contact Us
+                        </a>
+<a class="btn btn-link" href="service.html">
+                            Our Services
+                        </a>
+<a class="btn btn-link" href="gallery.html">
+                            Gallery
+                        </a>
+<a class="btn btn-link" href="appoinment.html">
+                            Online Appointment
+                        </a>
+<a class="btn btn-link" href="index.html">
+                            Home
+                        </a>
+</div>
+<!-- Chamber Information -->
+<div class="col-sm-12">
+<h5 class="text-primary mb-4">
+                            Chamber Information
+                        </h5>
+<!-- Chamber 1 -->
+<p class="text-white-50 mb-3">
+<strong class="text-white">
+                                Shamorita Hospital Ltd. & Trust Care Diagnostic Center
+                            </strong>
+<br/>
+<i class="fas fa-map-marker-alt me-2"></i>
+                            Panthapath & Mohammadpur, Dhaka
+                            <br/>
+<i class="fas fa-phone me-2"></i>
+                            Appointment: 01717-497858
+
+                        </p>
+<!-- Chamber 2 -->
+<p class="text-white-50 mb-3">
+<strong class="text-white">
+                                Appointment &amp; Consultation
+                            </strong>
+<br/>
+<i class="fas fa-phone me-2"></i>
+                            01717-497858
+
+                        </p>
+<!-- Chamber 3 -->
+<p class="text-white-50 mb-0">
+<strong class="text-white">
+                                Email
+                            </strong>
+<br/>
+<i class="fas fa-envelope me-2"></i>
+                            01717-497858
+
+                        </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Copyright Footer -->
+<div class="container-fluid bg-dark text-white border-top border-secondary py-4 site-copyright wow fadeIn" data-wow-delay="0.1s">
+<div class="container">
+<div class="row">
+<div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+
+                © <a class="border-bottom" href="#">Dr. Md. Habibur Rahman — Urology &amp; Andrology Specialist</a>, All Right Reserved.
+
+            </div>
+<div class="col-md-6 text-center text-md-end">
+
+                Designed By <span class="text-white">Shamorita Hospital Ltd. & Trust Care Diagnostic Center IT</span>
+</div>
+</div>
+</div>
+</div>
+<!-- footer -->
+<!-- ===== BACK TO TOP ===== -->
+<a class="btn btn-lg btn-primary btn-lg-square back-to-top" href="#"><i class="bi bi-arrow-up"></i></a>
+<!-- ===== JAVASCRIPT ===== -->
+<script>
+        // ----- LIGHTBOX -----
+        const lightboxModal = document.getElementById('lightbox-modal');
+        const lightboxImg = document.getElementById('lightbox-img');
+
+        function openLightbox(element) {
+            const img = element.querySelector('img');
+            lightboxImg.src = img.src;
+            lightboxImg.alt = img.alt;
+            lightboxModal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            lightboxModal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        lightboxModal.addEventListener('click', function(e) {
+            if (e.target === lightboxModal) closeLightbox();
+        });
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') closeLightbox();
+        });
+        lightboxImg.addEventListener('click', function(e) { e.stopPropagation(); });
+        
+    </script>
+<!-- ===== JS LIBRARIES ===== -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="lib/wow/wow.min.js"></script>
+<script src="lib/easing/easing.min.js"></script>
+<script src="lib/waypoints/waypoints.min.js"></script>
+<script src="lib/counterup/counterup.min.js"></script>
+<script src="lib/owlcarousel/owl.carousel.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/cms-content.js"></script>
+</body>
+</html>
